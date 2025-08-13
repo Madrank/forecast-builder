@@ -33,3 +33,12 @@ Les données sont sauvegardées en **localStorage** et peuvent être réinitiali
 - **localStorage** — Persistance des données côté client
 
 ---
+
+## Structure du projet
+
+/forecast-builder
+│
+├── index.html # Structure de la page
+├── style.css # Styles et mise en page
+├── app.js # Logique de calculs, affichage et sauvegarde
+└── README.md # Documentation du projet
