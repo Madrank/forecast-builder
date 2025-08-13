@@ -15,5 +15,107 @@
       </div>
     </div>
   </header>
+  <main class="app">
+    
+    <aside class="panel" aria-labelledby="sidebar-title">
+      <h2 id="sidebar-title" class="visually-hidden">Paramètres business</h2>
+      <small>Paramètres business</small>
+
+      <form id="business-settings" novalidate>
+        <div class="field">
+          <label for="targetAnnual">Objectif CA annuel (€)</label>
+          <input id="targetAnnual" type="number" value="120000" min="0" />
+        </div>
+
+        <div class="field">
+          <label>Modèle de prix</label>
+          <div class="seg" id="pricingMode" role="group" aria-label="Modèle de prix">
+            <button type="button" data-mode="one" class="active">Prix moyen / client</button>
+            <button type="button" data-mode="rec">MRR × durée</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="avgPrice">Prix moyen par client (€) <span class="muted">(ou MRR si récurrent)</span></label>
+          <input id="avgPrice" type="number" value="1200" min="0" />
+        </div>
+
+        <div class="field row">
+          <div class="half">
+            <label for="leadsBase">Leads / mois (initial)</label>
+            <input id="leadsBase" type="number" value="300" min="0" />
+          </div>
+          <div class="half">
+            <label for="leadsGrowth">Croissance mensuelle des leads (%)</label>
+            <input id="leadsGrowth" type="number" value="2" min="-100" max="100" />
+          </div>
+        </div>
+
+        <div class="field row">
+          <div class="half">
+            <label for="rateMeeting">Taux RDV (%)</label>
+            <input id="rateMeeting" type="number" value="20" min="0" max="100" />
+          </div>
+          <div class="half">
+            <label for="rateShow">Taux show-up (%)</label>
+            <input id="rateShow" type="number" value="80" min="0" max="100" />
+          </div>
+        </div>
+
+        <div class="field row">
+          <div class="half">
+            <label for="rateClose">Taux closing (%)</label>
+            <input id="rateClose" type="number" value="15" min="0" max="100" />
+          </div>
+          <div class="half">
+            <label for="saleCycle">Cycle de vente (jours)</label>
+            <input id="saleCycle" type="number" value="30" min="0" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="seasonality">Saisonnalité</label>
+          <select id="seasonality">
+            <option value="flat">Plate (uniforme)</option>
+            <option value="light">Légère (±15%)</option>
+            <option value="strong">Forte (±40%)</option>
+          </select>
+          <div class="hint">Applique un multiplicateur mensuel aux leads selon la saisonnalité.</div>
+        </div>
+
+        <div class="field row">
+          <div class="half">
+            <label for="adSpend">Dépenses pub / mois (€)</label>
+            <input id="adSpend" type="number" value="1200" min="0" />
+          </div>
+          <div class="half">
+            <label for="cpl">CPL (€) (optionnel)</label>
+            <input id="cpl" type="number" value="4" min="0" />
+          </div>
+        </div>
+
+        <div class="field row">
+          <div class="half">
+            <label for="fixedCost">Coûts fixes / mois (€)</label>
+            <input id="fixedCost" type="number" value="2000" min="0" />
+          </div>
+          <div class="half">
+            <label for="varCostClient">Coûts variables / client (€)</label>
+            <input id="varCostClient" type="number" value="100" min="0" />
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="calcBtn" class="btn" type="button">Calculer</button>
+          <button id="saveBtn" class="btn ghost" type="button">Sauvegarder</button>
+          <button id="resetBtn" class="btn ghost" type="reset">Réinitialiser</button>
+        </div>
+      </form>
+
+      <div class="hint">Les paramètres sont enregistrés localement dans votre navigateur.</div>
+    </aside>
+
+  </main>
+
 </body>
 </html>
