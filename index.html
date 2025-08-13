@@ -114,7 +114,75 @@
 
       <div class="hint">Les paramètres sont enregistrés localement dans votre navigateur.</div>
     </aside>
+    <section>
+      <div class="grid">
+        <article>
+          <div class="card">
+            <header>
+              <h2>Prévision sur 12 mois</h2>
+              <p class="muted">Mises à jour en temps réel</p>
+            </header>
 
+            <div class="kpis">
+              <div class="kpi">
+                <h3 id="kpiAnnual">- €</h3>
+                <p>CA estimé (12 mois)</p>
+              </div>
+              <div class="kpi">
+                <h3 id="kpiGap">-</h3>
+                <p>Écart vs objectif</p>
+              </div>
+              <div class="kpi">
+                <h3 id="kpiLeads">-</h3>
+                <p>Leads / mois (moy.)</p>
+              </div>
+            </div>
+
+            <div class="chart-wrap card">
+              <canvas id="chart" aria-label="Graphique des prévisions"></canvas>
+            </div>
+
+            <table>
+              <caption>Prévisions mensuelles</caption>
+              <thead>
+                <tr>
+                  <th>Mois</th>
+                  <th class="right">Leads</th>
+                  <th class="right">RDV</th>
+                  <th class="right">Shows</th>
+                  <th class="right">Clients</th>
+                  <th class="right">CA mensuel</th>
+                  <th class="right">Cumul CA</th>
+                </tr>
+              </thead>
+              <tbody id="tableBody"></tbody>
+            </table>
+          </div>
+        </article>
+
+        <aside>
+          <div class="card">
+            <h3>Synthèse & recommandations</h3>
+            <p id="summary" class="muted">Appuyez sur Calculer pour voir la synthèse</p>
+
+            <hr />
+
+            <section>
+              <h4>Scénarios rapides</h4>
+              <div>
+                <button id="scenario1" class="btn ghost">+20% Leads</button>
+                <button id="scenario2" class="btn ghost">+5% Conversion</button>
+              </div>
+            </section>
+
+            <section>
+              <h4>Export / Intégration</h4>
+              <p class="muted">Prêt pour export CSV ou injection vers une API (Airtable, Google Sheets) — option future.</p>
+            </section>
+          </div>
+        </aside>
+      </div>
+    </section>
   </main>
 
 </body>
